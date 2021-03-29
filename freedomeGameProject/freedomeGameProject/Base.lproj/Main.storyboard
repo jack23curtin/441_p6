@@ -51,6 +51,9 @@
                             <constraint firstItem="deB-6v-55y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="vhw-5V-Ez6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="jumper_draw" destination="deB-6v-55y" id="T1A-zS-M02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

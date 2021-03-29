@@ -7,8 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "jumperDraw.h"
+
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) CADisplayLink *link;
+
+@property (nonatomic, strong) IBOutlet jumperDraw *jumper_draw;
 
 @end
 

@@ -9,10 +9,14 @@
 
 @implementation jumperDraw
 @synthesize jumper_x, jumper_y;
+@synthesize LR_jump;
 
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
+
+//jumper_x = 51;
+//jumper_y = 500;
 
 
 - (void)drawRect:(CGRect)rect {
@@ -28,10 +32,37 @@
     for(UITouch *t in touches){
         CGPoint p = [t locationInView:self];
         NSLog(@"Touch %f , %f", p.x, p.y);
-        jumper_x = p.x;
-        jumper_y = p.y;
+        //jumper_x = p.x;
+        //jumper_y = p.y;
+        
+        if(LR_jump == YES){
+            LR_jump = NO;
+        }else{
+            LR_jump = YES;
+        }
+        
         [self setNeedsDisplay];
     }
+}
+
+- (void)animateJump{
+    jumper_y = 500;
+    if(LR_jump == YES){
+        if(jumper_x < 300){
+            //jumper_y = jumper_y + 1;
+            jumper_x = jumper_x + 4;
+        }
+    }
+    if(LR_jump == NO){
+        if(jumper_x > 50){
+            //jumper_y = jumper_y - 1;
+            jumper_x = jumper_x - 4;
+        }
+    }
+
+    [self setNeedsDisplay];
+
+
 }
 
 
