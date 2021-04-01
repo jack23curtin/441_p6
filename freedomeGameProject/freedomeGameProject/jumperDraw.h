@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float jumper_x, jumper_y;
 
+@property (nonatomic) float box_x, box_y;
+
+
 @property (nonatomic) bool LR_jump;
 
 

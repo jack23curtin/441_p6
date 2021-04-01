@@ -28,6 +28,8 @@
 - (void)tick:(CADisplayLink *)sender{
     NSLog(@"Redraw screen");
     [jumper_draw animateJump];
+
+    
 }
 
 
