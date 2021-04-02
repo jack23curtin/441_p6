@@ -17,6 +17,8 @@
 		793D946926110D92007F91F7 /* freedomeGameProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D946826110D92007F91F7 /* freedomeGameProjectTests.m */; };
 		793D947426110D92007F91F7 /* freedomeGameProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D947326110D92007F91F7 /* freedomeGameProjectUITests.m */; };
 		793D948926110EB0007F91F7 /* jumperDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D948826110EB0007F91F7 /* jumperDraw.m */; };
+		793D94A626175C51007F91F7 /* ScoreboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D94A526175C51007F91F7 /* ScoreboardViewController.m */; };
+		793D94B526176412007F91F7 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 793D94B426176412007F91F7 /* Connector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		793D947526110D92007F91F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793D948726110EB0007F91F7 /* jumperDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jumperDraw.h; sourceTree = "<group>"; };
 		793D948826110EB0007F91F7 /* jumperDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jumperDraw.m; sourceTree = "<group>"; };
+		793D94A426175C51007F91F7 /* ScoreboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreboardViewController.h; sourceTree = "<group>"; };
+		793D94A526175C51007F91F7 /* ScoreboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreboardViewController.m; sourceTree = "<group>"; };
+		793D94B326176412007F91F7 /* Connector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		793D94B426176412007F91F7 /* Connector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +120,12 @@
 				793D945226110D8B007F91F7 /* ViewController.h */,
 				793D945326110D8B007F91F7 /* ViewController.m */,
 				793D945526110D8B007F91F7 /* Main.storyboard */,
+				793D94A426175C51007F91F7 /* ScoreboardViewController.h */,
+				793D94A526175C51007F91F7 /* ScoreboardViewController.m */,
 				793D948726110EB0007F91F7 /* jumperDraw.h */,
 				793D948826110EB0007F91F7 /* jumperDraw.m */,
+				793D94B326176412007F91F7 /* Connector.h */,
+				793D94B426176412007F91F7 /* Connector.m */,
 				793D945826110D91007F91F7 /* Assets.xcassets */,
 				793D945A26110D91007F91F7 /* LaunchScreen.storyboard */,
 				793D945D26110D91007F91F7 /* Info.plist */,
@@ -271,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793D94B526176412007F91F7 /* Connector.m in Sources */,
+				793D94A626175C51007F91F7 /* ScoreboardViewController.m in Sources */,
 				793D945426110D8B007F91F7 /* ViewController.m in Sources */,
 				793D944E26110D8B007F91F7 /* AppDelegate.m in Sources */,
 				793D945F26110D91007F91F7 /* main.m in Sources */,

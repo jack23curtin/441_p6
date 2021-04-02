@@ -9,11 +9,21 @@
 
 #import "jumperDraw.h"
 
+#import "Connector.h"
+
+
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) CADisplayLink *link;
 
 @property (nonatomic, strong) IBOutlet jumperDraw *jumper_draw;
+
+
+
+//@property (nonatomic, strong) IBOutlet UILabel *tester;
+
+
+
 
 @end
 
