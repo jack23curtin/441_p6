@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 
-#import "ScoreboardViewController.h"
 
 
 @interface ViewController ()
@@ -19,6 +18,7 @@
 @synthesize jumper_draw;
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -27,16 +27,13 @@
     [link setPreferredFramesPerSecond:15];
     [link setPaused:NO];
 
+
     
 }
 
 - (void)tick:(CADisplayLink *)sender{
     //NSLog(@"Redraw screen");
     [jumper_draw animateJump];
-        
-
-
-    
 }
 
 

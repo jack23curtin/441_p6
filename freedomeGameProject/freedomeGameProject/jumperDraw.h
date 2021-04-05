@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Connector.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float box_x, box_y;
 
+@property (nonatomic) float coin_x, coin_y;
+
+
 
 @property (nonatomic) bool LR_jump;
 
@@ -28,16 +30,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) IBOutlet UILabel *currentScore;
 
-@property (nonatomic, strong) IBOutlet UILabel *passedCurrentScore;
 
 
 @property (nonatomic) int currentScoreInt;
 
+@property (nonatomic) int highScoreInt;
+@property (nonatomic, strong) IBOutlet UILabel *highScoreStr;
+
+@property (nonatomic) bool collectedCoin;
 
 
 
 
-@property (nonatomic, strong)Connector *connectorClass;
+
+@property (nonatomic) int numLoops;
+
+
+
+
+
+
 
 
 
@@ -45,7 +57,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)animateJump;
 
-- (void)prepareForSegue;
 
 
 
