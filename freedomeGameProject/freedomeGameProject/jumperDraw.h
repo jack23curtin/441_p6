@@ -28,7 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) IBOutlet UIButton *resetButton;
 
+@property (nonatomic, strong) IBOutlet UIButton *startButton;
+
+
 @property (nonatomic, strong) IBOutlet UILabel *currentScore;
+@property (nonatomic) bool startBool;
+
 
 
 

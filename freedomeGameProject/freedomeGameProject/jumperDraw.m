@@ -34,6 +34,10 @@
 
 @synthesize numLoops;
 
+@synthesize startButton;
+
+@synthesize startBool;
+
 
 
 
@@ -130,50 +134,52 @@
 }
 
 - (void)animateJump{
-    numLoops += 1;
-    if(endGame == YES){
-        jumper_y = 500;
-        resetButton.hidden = NO;
-    }else{
-        jumper_y = 500;
-        if(LR_jump == YES){
-            if(jumper_x < 327){
-                //jumper_y = jumper_y + 1;
-                jumper_x = jumper_x + 6;
-            }
-        }
-        if(LR_jump == NO){
-            if(jumper_x > 25){
-                //jumper_y = jumper_y - 1;
-                jumper_x = jumper_x - 6;
-            }
-        }
-        if(box_y > 750){
-            int rndValue = 30 + arc4random() % (330 - 30);
-            box_x = rndValue;
-            box_y = 0;
-            
-            currentScoreInt = currentScoreInt + 5;
-            NSString* myNewString = [NSString stringWithFormat:@"%i", currentScoreInt];
-            [currentScore setText:myNewString];
-            
-            if(currentScoreInt > highScoreInt){
-                highScoreInt = highScoreInt + 5;
-                NSString* myNewString2 = [NSString stringWithFormat:@"Highscore: %i", highScoreInt];
-                [highScoreStr setText:myNewString2];
-            }
-
+    if(startBool == YES){
+        numLoops += 1;
+        if(endGame == YES){
+            jumper_y = 500;
+            resetButton.hidden = NO;
         }else{
-            box_y = box_y + 8;
-        }
-        if(coin_y > 750){
-            int rndValue = 30 + arc4random() % (330 - 30);
-            coin_x = rndValue;
-            coin_y = 0;
-            collectedCoin = NO;
+            jumper_y = 500;
+            if(LR_jump == YES){
+                if(jumper_x < 327){
+                    //jumper_y = jumper_y + 1;
+                    jumper_x = jumper_x + 6;
+                }
+            }
+            if(LR_jump == NO){
+                if(jumper_x > 25){
+                    //jumper_y = jumper_y - 1;
+                    jumper_x = jumper_x - 6;
+                }
+            }
+            if(box_y > 750){
+                int rndValue = 30 + arc4random() % (330 - 30);
+                box_x = rndValue;
+                box_y = 0;
+                
+                currentScoreInt = currentScoreInt + 5;
+                NSString* myNewString = [NSString stringWithFormat:@"%i", currentScoreInt];
+                [currentScore setText:myNewString];
+                
+                if(currentScoreInt > highScoreInt){
+                    highScoreInt = highScoreInt + 5;
+                    NSString* myNewString2 = [NSString stringWithFormat:@"Highscore: %i", highScoreInt];
+                    [highScoreStr setText:myNewString2];
+                }
 
-        }else{
-            coin_y = coin_y + 12;
+            }else{
+                box_y = box_y + 8;
+            }
+            if(coin_y > 750){
+                int rndValue = 30 + arc4random() % (330 - 30);
+                coin_x = rndValue;
+                coin_y = 0;
+                collectedCoin = NO;
+
+            }else{
+                coin_y = coin_y + 12;
+            }
         }
     }
     [self setNeedsDisplay];
@@ -202,6 +208,12 @@
     
     
 
+}
+
+- (IBAction)beginGame:(id)sender
+{
+    startBool = YES;
+    startButton.hidden = YES;
 }
 
 
